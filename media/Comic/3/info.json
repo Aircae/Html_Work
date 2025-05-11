@@ -1,0 +1,44 @@
+{
+	"Info": [{
+			"Title": "大奉打更人"
+		},
+		{
+			"Data": "2025.5.10"
+		}
+	],
+	"List": [{
+			"Chapter": 1,
+			"Title": "牢狱之灾"
+		}
+	],
+	"Chapters": [{
+		"Number": 1,
+		"Title": "牢狱之灾",
+		"Pages": [
+			"../media/Comic/3/1/1.png",
+			"../media/Comic/3/1/2.png",
+			"../media/Comic/3/1/3.png",
+			"../media/Comic/3/1/4.png",
+			"../media/Comic/3/1/5.png",
+			"../media/Comic/3/1/6.png",
+			"../media/Comic/3/1/7.png",
+			"../media/Comic/3/1/8.png",
+			"../media/Comic/3/1/9.png",
+			"../media/Comic/3/1/10.png",
+			"../media/Comic/3/1/11.png",
+			"../media/Comic/3/1/12.png",
+			"../media/Comic/3/1/13.png",
+			"../media/Comic/3/1/14.png",
+			"../media/Comic/3/1/15.png",
+			"../media/Comic/3/1/16.png",
+			"../media/Comic/3/1/17.png",
+			"../media/Comic/3/1/18.png",
+			"../media/Comic/3/1/19.png",
+			"../media/Comic/3/1/20.png",
+			"../media/Comic/3/1/21.png",
+			"../media/Comic/3/1/22.png",
+			"../media/Comic/3/1/23.png",
+			"../media/Comic/3/1/24.png"
+		]
+	}]
+}

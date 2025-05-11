@@ -1,0 +1,38 @@
+{
+	"Main" : [
+		{"Cover" : "../media/Anime/1/Cover.webp"},
+		{"Status" : "连载中"},
+		{"Year" : "2025年4月"},
+		{"Name" : "天才治疗师退队作为无照治疗师快乐过活"},
+		{"Introduction" : "简介：  新的黑暗治疗师诞生！不是无照医生而是无照治疗师，治伤、治人、治风气。“你最近什么都没干吧，说白了已经不需要你了”。青年治疗师杰诺斯被冒险者队伍当成废物，以一枚金币的告别费被逐出了队伍。他是贫民出身，使用自创的治疗魔法，没有治疗师执照。无处可去的杰诺斯走在小巷中，遇到了腹部被刺伤，奄奄一息的妖精族少女莉莉。“放心，这种程度还有救”“咦？不觉得痛，伤口也消失了。为什么恢复如初了啊！？”无照天才治疗师在贫民街郊外的废墟街悄悄开办了治疗院，以此为舞台，无自知的最强奇幻故事即将开幕。"}
+	],
+	"Classification" : [
+		{"attribute" : "小说改"},
+		{"attribute" : "战斗"},
+		{"attribute" : "冒险"}
+	],
+	"Series" : [
+		{"Number" : "1", "src" : "../media/Anime/1/1.mp4&title=相称的报酬"},
+		{"Number" : "2", "src" : "../media/Anime/1/2.mp4&title=废墟街的无照治疗师"}
+	],
+	"Dubbing" : [
+		{"Character" : "杰诺斯","Name" : "坂田将吾"},
+		{"Character" : "莉莉","Name" : "花井美春"},
+		{"Character" : "卡蜜拉","Name" : "日笠阳子"},
+		{"Character" : "索菲亚","Name" : "永濑安奈"},
+		{"Character" : "凛佳","Name" : "阳高真白"},
+		{"Character" : "蕾薇","Name" : "菊池纱矢香"},
+		{"Character" : "克里希娜","Name" : "中岛由贵"},
+		{"Character" : "宗迪","Name" : "八代拓"},
+		{"Character" : "阿斯通","Name" : "水中雅章"}
+	],
+	"STAFF" : [
+		{"Original" : "原作：菱川佐角"},
+		{"Character" : "人设原案：驮部龙"},
+		{"Director" : "导演：吉崎让"},
+		{"Scriptwriter" : "编剧：宫城大翔"},
+		{"Color Design" : "色彩设计：河田萌"},
+		{"Music" : "音乐：富贵晴美"},
+		{"Editor" : "剪辑：新沼奈美"}
+	]
+}

@@ -1,0 +1,38 @@
+{
+	"Main" : [
+		{"Cover" : "../media/Anime/5/Cover.webp"},
+		{"Status" : "完结"},
+		{"Year" : "2014年4月"},
+		{"Name" : "NO GAME NO LIFE 游戏人生"},
+		{"Introduction" : "简介：  尼特族又闭门不出，但是在网络上甚至被当作都市传说口耳相传的天才玩家兄妹·空和白。将世界称为“垃圾游戏”的这两个人某一天被自称“神”的少年召唤到了异世界。那里是被神明禁止了战争，“一切交由游戏来决定”的世界——没错，就连国境线也是一样。被其他种族逼入绝境，只剩下最后一座都市的‘人类种<Imanity>’。空和白，两名废人兄妹到底能否在异世界成为‘人类的救世主’？——“那么，让我们开始游戏吧！”"}
+	],
+	"Classification" : [
+		{"attribute" : "奇幻"},
+		{"attribute" : "智斗"},
+		{"attribute" : "架空"},
+		{"attribute" : "穿越"}
+	],
+	"Series" : [
+		{"Number" : "1", "src" : "../media/Anime/5/1.mp4&title=外行人"},
+		{"Number" : "2", "src" : "../media/Anime/5/2.mp4&title=挑战者"}
+	],
+	"Dubbing" : [
+		{"Character" : "空","Name" : "松岡禎丞"},
+		{"Character" : "白","Name" : "茅野愛衣"},
+		{"Character" : "史蒂芬妮·多拉","Name" : "日笠陽子"},
+		{"Character" : "吉普莉尔","Name" : "田村ゆかり"},
+		{"Character" : "克拉米","Name" : "井口裕香"},
+		{"Character" : "菲尔·尼尔巴连","Name" : "能登麻美子"},
+		{"Character" : "特图","Name" : "釘宮理恵"},
+		{"Character" : "初濑伊纲","Name" : "沢城みゆき"}
+	],
+	"STAFF" : [
+		{"Original" : "原作：榎宮祐"},
+		{"Character" : "人物原案：榎宮祐"},
+		{"Director" : "监督：いしづかあつこ"},
+		{"Scriptwriter" : "脚本：榎宮祐"},
+		{"Color Design" : "色彩设计：大野春恵"},
+		{"Music" : "音乐：佐宗綾子"},
+		{"Editor" : "动画制作：MADHOUSE"}
+	]
+}

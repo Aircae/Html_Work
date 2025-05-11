@@ -1,0 +1,40 @@
+{
+	"Main" : [
+		{"Cover" : "../media/Anime/4/Cover.webp"},
+		{"Status" : "完结"},
+		{"Year" : "2009年10月"},
+		{"Name" : "某科学的超电磁炮"},
+		{"Introduction" : "简介：  故事发生在面积占据东京都的三分之一，居住着230万名人口且其中八成人口是学生的巨大都市“学园都市”。学园都市的所有学生均会接受超能力开发，借由药物、催眠术与通电刺激等方式取得超能力。能力者以范围和威力分为LV0至LV5。主角御坂美琴是学园都市中仅七位LV5（超能力者）的其中一人，排行第三。她是拥有操纵电击能力的“电击使”，站在电击能力的顶峰，因而被称为“超电磁炮”。本作不但通过美琴的视角来描绘学园都市的平常而不平凡的日常生活，也叙述了学园都市秘密进行非人道性质的实验，从而使大家对于本作及本篇《魔法禁书目录》的背景（世界观）的认识也慢慢变得清楚。"}
+	],
+	"Classification" : [
+		{"attribute" : "漫画改"},
+		{"attribute" : "战斗"},
+		{"attribute" : "校园"},
+		{"attribute" : "奇幻"}
+	],
+	"Series" : [
+		{"Number" : "1", "src" : "../media/Anime/4/1.mp4&title=电击使"},
+		{"Number" : "2", "src" : "../media/Anime/4/2.mp4&title=炎日下工作 必须补充水分"}
+	],
+	"Dubbing" : [
+		{"Character" : "御坂美琴","Name" : "佐藤利奈"},
+		{"Character" : "白井黑子","Name" : "新井里美"},
+		{"Character" : "初春饰利","Name" : "豊崎愛生"},
+		{"Character" : "佐天泪子","Name" : "伊藤加奈惠"},
+		{"Character" : "春上衿衣","Name" : "花澤香菜"},
+		{"Character" : "婚后光子","Name" : "寿美菜子"},
+		{"Character" : "湾内绢保","Name" : "戸松遥"},
+		{"Character" : "泡浮万彬","Name" : "南條愛乃"},
+		{"Character" : "木山春生","Name" : "田中敦子"}
+	],
+	"STAFF" : [
+		{"Original" : "原作：镰池和马"},
+		{"Original" : "原作：冬川基"},
+		{"Character" : "人物设定： 田中 雄一"},
+		{"Director" : "导演：长井龙雪"},
+		{"Scriptwriter" : "编辑：西山茂"},
+		{"Color Design" : "色彩设计：安藤智美"},
+		{"Music" : "音乐：I've sound"},
+		{"Editor" : "剪辑： 西山茂"}
+	]
+}

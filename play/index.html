@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<link rel="icon" type="image/png" href="../logo.png"/>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="index.css" />
+	</head>
+	<body>
+		<header id="header">
+			<div id="tab_left">
+				<div class="tab_item">
+					<img id="logo" src="../logo.png" />
+					<a href="../index.html"><span>首页</span></a>
+				</div>
+			</div>
+			<div id="search">
+				<input type="text" id="search_input" placeholder="请输入搜索内容……">
+				<button id="search_btn"><img class="icon" src="../svg/search.svg" /></button>
+			</div>
+			<div id="tab_right">
+				<div id="user">
+					<a href="../login/index.html"><img class="icon" src="../svg/user.svg" /><span>账户</span></a>
+				</div>
+				<div id="history">
+					<div class="tab_item">
+						<a href="#"><img class="icon" src="../svg/history.svg" /><span>历史</span></a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="main-content">
+			<!-- 左侧主内容 -->
+			<div class="main-area">
+				<div class="player-container">
+					<video id="main-video" crossorigin="anonymous"></video>
+					<div class="loading-spinner"></div>
+					<div class="controls-container">
+						<div class="progress-container">
+							<div class="progress-bar" id="progress-bar"></div>
+						</div>
+						<div style="display: flex; align-items: center;">
+							<button class="control-btn" id="play-btn">▶</button>
+							<span class="time-display">
+								<span id="current-time">00:00</span> /
+								<span id="duration">00:00</span>
+							</span>
+							<div class="volume-container">
+								<button class="control-btn" id="volume-btn">🔊</button>
+								<input type="range" class="volume-slider" id="volume-slider" min="0" max="1" step="0.1"
+									value="1">
+							</div>
+							<button class="control-btn" id="fullscreen-btn" style="margin-left: auto;">⛶</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- 简介 -->
+				<div class="info">
+					<div class="meta-container">
+						<img id="cover" class="cover-image" alt="封面">
+						<div class="meta-content">
+							<h1 id="anime-name" class="anime-title"></h1>
+							<div class="meta-grid">
+								<div id="anime-status" class="meta-item"></div>
+								<div id="anime-year" class="meta-item"></div>
+								<div class="categories" id="anime-category"></div>
+							</div>
+							<p id="anime-description" class="description"></p>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<!-- 右侧栏 -->
+			<div class="sidebar">
+				<!-- 正片列表 -->
+				<div class="Series">
+					<div class="series-header">正片</div>
+					<div class="episode-list" id="series-list"></div>
+				</div>
+
+				<!-- 声优和STAFF -->
+				<div class="staff-section">
+					<div class="series-header">声优</div>
+					<div id="dubbing-list"></div>
+				</div>
+				<div class="staff-section">
+					<div class="info-title">制作</div>
+					<div id="staff-list"></div>
+				</div>
+			</div>
+		</div>
+		<script src="index.js"></script>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+{
+	"Main" : [
+		{"Cover" : "../media/Anime/3/Cover.webp"},
+		{"Status" : "完结"},
+		{"Year" : "2025年1月"},
+		{"Name" : "颂乐人偶"},
+		{"Introduction" : "简介：  「我说过了吧？请你们将剩余的人生交给我」 丰川祥子招募组建的乐队・Ave Mujica取得了演唱会和媒体曝光等商业上的成功。 少女失去了曾发誓命运与共的友人，又失去了自己出生长大的家庭。 她为什么要背负他人的一生，将乐队坚持下去呢？将过往与真容都以假面遮掩，今夜亦降临于完美的箱庭"}
+	],
+	"Classification" : [
+		{"attribute" : "原创"},
+		{"attribute" : "音乐"}
+	],
+	"Series" : [
+		{"Number" : "1", "src" : "../media/Anime/3/1.mp4&title=秘密"},
+		{"Number" : "2", "src" : "../media/Anime/3/2.mp4&title=用结果说话"}
+	],
+	"Dubbing" : [
+		{"Character" : "三角初华","Name" : "佐佐木李子"},
+		{"Character" : "若叶睦","Name" : "渡濑结月"},
+		{"Character" : "八幡海铃","Name" : "冈田梦以"},
+		{"Character" : "祐天寺若麦","Name" : "米泽茜"},
+		{"Character" : "丰川祥子","Name" : "高尾奏音"}
+	],
+	"STAFF" : [
+		{"Original" : "原作：Bushiroad"},
+		{"Character" : "人设原案：一和"},
+		{"Character" : "人设原案：植田 和幸"},
+		{"Director" : "导演：柿本 广大"},
+		{"Scriptwriter" : "编剧：绫奈 由仁子"},
+		{"Color Design" : "色彩设计：北川 顺子"},
+		{"Music" : "音乐：藤田 淳平"},
+		{"Editor" : "剪辑：日高 初美"}
+	]
+}

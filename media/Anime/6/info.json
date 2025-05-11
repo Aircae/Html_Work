@@ -1,0 +1,38 @@
+{
+	"Main" : [
+		{"Cover" : "../media/Anime/6/Cover.webp"},
+		{"Status" : "完结"},
+		{"Year" : "2015年7月"},
+		{"Name" : "Charlotte"},
+		{"Introduction" : "简介：  思春期的少年少女中极少部分人会发作的特殊能力。驱使着无人知晓的能力，过着顺风顺水学园生活的乙坂有宇。突然出现在这样的他的面前的少女，友利奈绪。从与她相遇的那一天起，被揭露出特殊能力者的宿命。这是由麻枝准所描绘的，特殊能力者们奔跑着的青春物语——。"}
+	],
+	"Classification" : [
+		{"attribute" : "日常"},
+		{"attribute" : "校园"},
+		{"attribute" : "奇幻"},
+		{"attribute" : "催泪"}
+	],
+	"Series" : [
+		{"Number" : "1", "src" : "../media/Anime/6/1.mp4&title=将自己想象成他人"},
+		{"Number" : "2", "src" : "../media/Anime/6/2.mp4&title=绝望的旋律"}
+	],
+	"Dubbing" : [
+		{"Character" : "乙坂有宇","Name" : "内山昂辉"},
+		{"Character" : "友利奈绪","Name" : "佐仓绫音"},
+		{"Character" : "高城丈士朗","Name" : "水岛大宙"},
+		{"Character" : "西森柚咲","Name" : "内田真礼"},
+		{"Character" : "黑羽美砂","Name" : "内田真礼"},
+		{"Character" : "乙坂步未","Name" : "麻仓桃"},
+		{"Character" : "白柳弓","Name" : "中原麻衣"}
+	],
+	"STAFF" : [
+		{"Original" : "原作：麻枝准"},
+		{"Character" : "人设原案：Na-Ga"},
+		{"Director" : "角色设计：关口可奈味"},
+		{"Scriptwriter" : "编集：高桥步"},
+		{"Color Design" : "色彩设计：菅原美佳"},
+		{"Music" : "音乐：ANANT-GARDE EYES"},
+		{"Music" : "音乐：麻枝准"},
+		{"Editor" : "动画制作：P.A.WORKS"}
+	]
+}

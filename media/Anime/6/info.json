@@ -26,13 +26,13 @@
 		{"Character" : "白柳弓","Name" : "中原麻衣"}
 	],
 	"STAFF" : [
-		{"Original" : "原作：麻枝准"},
-		{"Character" : "人设原案：Na-Ga"},
-		{"Director" : "角色设计：关口可奈味"},
-		{"Scriptwriter" : "编集：高桥步"},
-		{"Color Design" : "色彩设计：菅原美佳"},
-		{"Music" : "音乐：ANANT-GARDE EYES"},
-		{"Music" : "音乐：麻枝准"},
-		{"Editor" : "动画制作：P.A.WORKS"}
+		{"原作" : "麻枝准"},
+		{"人设原案" : "Na-Ga"},
+		{"角色设计" : "关口可奈味"},
+		{"编集" : "高桥步"},
+		{"色彩设计" : "菅原美佳"},
+		{"音乐" : "ANANT-GARDE EYES"},
+		{"音乐" : "麻枝准"},
+		{"动画制作" : "P.A.WORKS"}
 	]
 }

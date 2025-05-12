@@ -351,12 +351,11 @@ video {
 	flex: 1 1 5vw;
 	box-sizing: border-box;
 	margin: 10px 10px;
+	padding: 10px 0 0 10px;
 }
 
 .episode-card div{
-	padding-top: 5px;
-	padding-left: 10px;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 }
 
 .episode-card:hover {

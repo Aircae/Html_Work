@@ -113,27 +113,32 @@ video.addEventListener('loadedmetadata', () => {
 resetHideTimer();
 
 document.addEventListener('DOMContentLoaded', async () => {
-    try {
-        const { videoUrl } = getUrlParams();
-        const basePath = videoUrl.split('/').slice(0, -1).join('/');
-        const infoPath = `${basePath}/info.json`;
+	try {
+		const {
+			videoUrl
+		} = getUrlParams();
+		const basePath = videoUrl.split('/').slice(0, -1).join('/');
+		const infoPath = `${basePath}/info.json`;
 
-        const response = await fetch(infoPath);
-        if (!response.ok) throw new Error('信息文件加载失败');
-        const data = await response.json();
+		const response = await fetch(infoPath);
+		if (!response.ok) throw new Error('信息文件加载失败');
+		const data = await response.json();
 
-		const mainInfo = data.Main.reduce((acc, item) => ({...acc, ...item}), {});
+		const mainInfo = data.Main.reduce((acc, item) => ({
+			...acc,
+			...item
+		}), {});
 		document.getElementById('cover').src = mainInfo.Cover;
 		document.getElementById('anime-name').textContent = mainInfo.Name;
 		document.getElementById('anime-status').textContent = `状态：${mainInfo.Status}`;
 		document.getElementById('anime-year').textContent = `年份：${mainInfo.Year}`;
 		document.getElementById('anime-description').textContent = mainInfo.Introduction;
-		
+
 		const categoryContainer = document.getElementById('anime-category');
 		data.Classification.forEach(cat => {
-		    const span = document.createElement('span');
-		    span.textContent = cat.attribute;
-		    categoryContainer.appendChild(span);
+			const span = document.createElement('span');
+			span.textContent = cat.attribute;
+			categoryContainer.appendChild(span);
 		});
 
 		const seriesList = document.getElementById('series-list');
@@ -166,11 +171,94 @@ document.addEventListener('DOMContentLoaded', async () => {
 		data.STAFF.forEach(staff => {
 			const item = document.createElement('div');
 			item.className = 'staff-item';
-			item.textContent = Object.values(staff)[0];
+			const [key, value] = Object.entries(staff)[0];
+			item.innerHTML = `
+        <span>${key}</span><br>
+        <span>${value}</span>
+    `;
 			staffList.appendChild(item);
 		});
 
 	} catch (error) {
 		console.error('加载番剧信息失败:', error);
+	}
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+	const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+	const username = sessionStorage.getItem('username');
+	const historyContent = document.getElementById('history-content');
+
+	if (isLoggedIn) {
+		// 更新用户信息
+		document.getElementById('user-icon').src = '../svg/admin.svg';
+		document.getElementById('user-text').textContent = username;
+		document.getElementById('no-user').textContent = "";
+		document.getElementById('user').href = '#';
+		const historyPopup = document.querySelector('.history-popup');
+		if (historyPopup) {
+			historyPopup.style.left = '90.5%';
+		}
+
+		// 模拟获取历史记录数据
+		const historyData = [{
+				title: '天才治疗师 第1集',
+				url: 'play/index.html?videoUrl=../media/Anime/1/1.mp4&title=天才治疗师退队作为无照治疗师快乐过活'
+			},
+			{
+				title: '葬送的芙莉莲 第1集',
+				url: 'play/index.html?videoUrl=../media/Anime/2/1.mp4&title=葬送的芙莉莲'
+			},
+			{
+				title: '某科学的超电磁炮 第1集',
+				url: 'play/index.html?videoUrl=../media/Anime/4/1.mp4&title=某科学的超电磁炮'
+			}
+		];
+
+		// 生成带链接的历史记录
+		historyContent.innerHTML = `
+            <ul>
+                ${historyData.map(item => `
+                    <li style="padding: 8px 0; border-bottom: 1px solid #eee;">
+                        <a href="${item.url}" style="color: inherit; text-decoration: none;">
+                            ${item.title}
+                        </a>
+                    </li>
+                `).join('')}
+            </ul>
+        `;
+
+		const sheets = document.styleSheets;
+		let ruleIndex;
+		let ruleFound = false;
+
+		for (let i = 0; i < sheets.length && !ruleFound; i++) {
+			const sheet = sheets[i];
+			try {
+				for (let j = 0; j < sheet.cssRules.length; j++) {
+					if (sheet.cssRules[j].selectorText === "#history::after") {
+						ruleIndex = j;
+						ruleFound = true;
+						break;
+					}
+				}
+			} catch (e) {
+				console.error("Error accessing style sheet:", e);
+			}
+		}
+		if (ruleFound) {
+			sheets[0].cssRules[ruleIndex].style.left = "90.5%";
+		} else {
+			console.log("对应样式规则未找到");
+		}
+	} else {
+		historyContent.innerHTML = '<div class="no-history">无历史记录</div>';
+	}
+});
+
+document.getElementById('user').addEventListener('click', () => {
+	if (sessionStorage.getItem('isLoggedIn')) {
+		sessionStorage.clear();
+		location.reload();
 	}
 });

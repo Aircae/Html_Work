@@ -6,7 +6,8 @@ document.getElementById('btn').addEventListener('click', function() {
     if (username === 'admin' && password === '123456') {
         sessionStorage.setItem('isLoggedIn', 'true');
         sessionStorage.setItem('username', username);
-        window.location.href = '../index.html';
+		const returnUrl = document.referrer || '../index.html';
+		window.location.href = returnUrl;
     } else {
         alert('账号或密码错误');
     }

@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	font-family: 'Courier New', Courier, monospace;
 }
 
 body {
@@ -88,11 +89,18 @@ a{
 	gap: 50px;
 }
 
-#user span {
+#no-user {
 	font-size: 14px;
 	position: relative;
 	top: 15px;
-	left: -33px;
+	left: -32px;
+}
+
+#user-text{
+	font-size: 14px;
+	position: relative;
+	top: 15px;
+	left: -39px;
 }
 
 #history span {
@@ -107,7 +115,7 @@ a{
     display: none;
     position: absolute;
     top: calc(100% + 10px); /* 增加间距 */
-    left: 83.5%;
+    left: 86.7%;
     transform: translateX(-50%);
     width: 280px;
     background: linear-gradient(145deg, #f8f9fa, #ffffff);
@@ -216,10 +224,10 @@ a{
     content: "";
     position: absolute;
     bottom: -20px;
-    left: 83.5%;
+    left: 86.7%;
     transform: translateX(-50%);
     border: 10px solid transparent;
-    border-top-color: rgba(255,255,255,0.9);
+    border-top-color: rgba(255, 255, 255, 0.9);
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -382,7 +390,7 @@ a{
 .toolbar {
 	text-align: center;
     position: fixed;
-    right: 30px;
+    right: 10px;
     bottom: 50%;
     transform: translateY(50%);
     background: white;

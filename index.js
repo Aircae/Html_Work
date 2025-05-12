@@ -4,34 +4,38 @@ const inContainer = document.getElementById('in');
 let currentIndex = 0;
 
 window.addEventListener('DOMContentLoaded', () => {
-    const isLoggedIn = sessionStorage.getItem('isLoggedIn');
-    const username = sessionStorage.getItem('username');
-    const historyContent = document.getElementById('history-content');
+	const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+	const username = sessionStorage.getItem('username');
+	const historyContent = document.getElementById('history-content');
 
-    if(isLoggedIn) {
-        // 更新用户信息
-        document.getElementById('user-icon').src = 'svg/admin.svg';
-        document.getElementById('user-text').textContent = username;
-        document.getElementById('user').href = '#';
-        
-        // 模拟获取历史记录数据
-        const historyData = [
-            { 
-                title: '天才治疗师 第1集', 
-                url: 'play/index.html?videoUrl=../media/Anime/1/1.mp4&title=天才治疗师退队作为无照治疗师快乐过活' 
-            },
-            { 
-                title: '葬送的芙莉莲 第1集', 
-                url: 'play/index.html?videoUrl=../media/Anime/2/1.mp4&title=葬送的芙莉莲' 
-            },
-            { 
-                title: '某科学的超电磁炮 第1集', 
-                url: 'play/index.html?videoUrl=../media/Anime/4/1.mp4&title=某科学的超电磁炮' 
-            }
-        ];
-        
-        // 生成带链接的历史记录
-        historyContent.innerHTML = `
+	if (isLoggedIn) {
+		// 更新用户信息
+		document.getElementById('user-icon').src = 'svg/admin.svg';
+		document.getElementById('user-text').textContent = username;
+		document.getElementById('no-user').textContent = "";
+		document.getElementById('user').href = '#';
+		const historyPopup = document.querySelector('.history-popup');
+		if(historyPopup) {
+		    historyPopup.style.left = '87.7%';
+		}
+
+		// 模拟获取历史记录数据
+		const historyData = [{
+				title: '天才治疗师 第1集',
+				url: 'play/index.html?videoUrl=../media/Anime/1/1.mp4&title=天才治疗师退队作为无照治疗师快乐过活'
+			},
+			{
+				title: '葬送的芙莉莲 第1集',
+				url: 'play/index.html?videoUrl=../media/Anime/2/1.mp4&title=葬送的芙莉莲'
+			},
+			{
+				title: '某科学的超电磁炮 第1集',
+				url: 'play/index.html?videoUrl=../media/Anime/4/1.mp4&title=某科学的超电磁炮'
+			}
+		];
+
+		// 生成带链接的历史记录
+		historyContent.innerHTML = `
             <ul>
                 ${historyData.map(item => `
                     <li style="padding: 8px 0; border-bottom: 1px solid #eee;">
@@ -42,17 +46,41 @@ window.addEventListener('DOMContentLoaded', () => {
                 `).join('')}
             </ul>
         `;
-    } else {
-        historyContent.innerHTML = '<div class="no-history">无历史记录</div>';
-    }
-});
-	
-	document.getElementById('user').addEventListener('click', () => {
-		if(sessionStorage.getItem('isLoggedIn')) {
-			sessionStorage.clear();
-			location.reload();
+		
+		const sheets = document.styleSheets;
+		let ruleIndex;
+		let ruleFound = false;
+		
+		for (let i = 0; i < sheets.length && !ruleFound; i++) {
+			const sheet = sheets[i];
+			try {
+				for (let j = 0; j < sheet.cssRules.length; j++) {
+					if (sheet.cssRules[j].selectorText === "#history::after") {
+						ruleIndex = j;
+						ruleFound = true;
+						break;
+					}
+				}
+			} catch (e) {
+				console.error("Error accessing style sheet:", e);
+			}
 		}
-	});
+		if (ruleFound) {
+			sheets[0].cssRules[ruleIndex].style.left = "87.7%";
+		} else {
+			console.log("对应样式规则未找到");
+		}
+	} else {
+		historyContent.innerHTML = '<div class="no-history">无历史记录</div>';
+	}
+});
+
+document.getElementById('user').addEventListener('click', () => {
+	if (sessionStorage.getItem('isLoggedIn')) {
+		sessionStorage.clear();
+		location.reload();
+	}
+});
 
 function initCarousel() {
 	updateCarousel();

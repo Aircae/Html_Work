@@ -1,0 +1,454 @@
+.player-container {
+	position: relative;
+	width: 60vw;
+	height: 70%;
+	background: #000;
+	height: calc(60vw * 9/16);
+	overflow: hidden;
+	border-radius: 12px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	padding-left: 10vw;
+	min-height: 100vh;
+	background-attachment: fixed;
+	background: linear-gradient(to bottom, rgb(127, 127, 213), rgb(134, 168, 231), rgb(145, 234, 228));
+}
+
+video {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.controls-container {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 15px;
+	background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+	transition: opacity 0.3s ease;
+	color: #fff;
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.controls-hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.control-btn {
+	background: none;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	padding: 8px;
+	margin: 0 5px;
+	font-size: 18px;
+	transition: opacity 0.2s;
+}
+
+.control-btn:hover {
+	opacity: 0.8;
+}
+
+.progress-container {
+	height: 4px;
+	background: rgba(255, 255, 255, 0.2);
+	margin: 12px 0;
+	cursor: pointer;
+}
+
+.progress-bar {
+	height: 100%;
+	background: #fb7299;
+	width: 0%;
+	transition: width 0.1s linear;
+}
+
+.time-display {
+	font-size: 14px;
+	margin: 0 10px;
+}
+
+.volume-container {
+	display: inline-flex;
+	align-items: center;
+	position: relative;
+}
+
+.volume-slider {
+	width: 100px;
+	margin-bottom: 30px;
+	display: none;
+	position: absolute;
+	bottom: 40px;
+	left: -27px;
+	transform: rotate(-90deg);
+}
+
+.volume-container:hover .volume-slider {
+	display: block;
+}
+
+@keyframes loading {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.loading-spinner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 40px;
+	height: 40px;
+	border: 4px solid rgba(255, 255, 255, 0.3);
+	border-top-color: #fb7299;
+	border-radius: 50%;
+	animation: loading 0.8s linear infinite;
+	display: none;
+	transform: translate(-50%, -50%);
+}
+
+#header {
+	position: relative;
+	width: 80vw;
+	height: 70px;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	gap: 25%;
+	background-color: white;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+#logo {
+	width: 60px;
+}
+
+#tab_left span {
+	vertical-align: 100%;
+}
+
+#search {
+	display: flex;
+	align-items: center;
+	background: #f5f5f5;
+	border-radius: 20px;
+	padding: 8px 15px;
+	width: 300px;
+	transition: all 0.3s;
+}
+
+#search_input {
+	border: none;
+	background: transparent;
+	outline: none;
+	padding: 0 10px;
+	font-size: 14px;
+}
+
+#search_btn {
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: #666;
+	transition: transform 0.2s;
+	padding-left: 5vw;
+}
+
+#search_btn:hover {
+	transform: scale(1.1);
+}
+
+.icon {
+	width: 20px;
+}
+
+#tab_right {
+	display: flex;
+	align-items: center;
+	gap: 50px;
+}
+
+#user span {
+	font-size: 14px;
+	position: relative;
+	top: 17px;
+	left: -25px;
+}
+
+#history span {
+	font-size: 14px;
+	position: relative;
+	top: 17px;
+	left: -25px;
+}
+
+.main-content {
+	max-width: 80vw;
+	margin-top: 30px;
+	display: grid;
+	grid-template-columns: minmax(0, 3fr) 1fr;
+	max-height: calc(100vh + 10vh);
+}
+
+/* 剧集网格布局 */
+.series-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 15px;
+}
+
+.episode-card {
+	background: #f8f9fa;
+	border-radius: 8px;
+	transition: transform 0.2s;
+	cursor: pointer;
+	flex: 1 1 5vw;
+	box-sizing: border-box;
+	margin: 10px 10px;
+}
+
+.episode-card div{
+	padding-top: 5px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+.episode-card:hover {
+	transform: translateY(-3px);
+	background: #fb729911;
+}
+
+/* 声优网格布局 */
+.dubbing-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+	gap: 20px;
+}
+
+.character-card {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	background: #f8f9fa;
+	border-radius: 8px;
+}
+
+.character-info {
+	margin-left: 15px;
+}
+
+.character-name {
+	font-weight: 600;
+	color: #222;
+}
+
+.cv-name {
+	color: #666;
+	font-size: 0.9em;
+}
+
+/* 正片列表在侧边栏 */
+.sidebar .series-section {
+	margin-left: 50px;
+	background: #fff;
+	border-radius: 4px;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.sidebar .episode-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+.sidebar .episode-item {
+	background: #f6f7f8;
+	border-radius: 4px;
+	padding: 12px;
+	font-size: 13px;
+	transition: all 0.2s;
+	margin-left: 50px;
+}
+
+.sidebar .episode-item:hover {
+	background: #fb7299;
+	color: white;
+}
+
+/* 声优部分优化 */
+.staff-section {
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 0 15px 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 统一标题样式 */
+.staff-section .series-header,
+.staff-section .info-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+    margin: 0 0 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #fb7299;
+}
+
+/* 声优网格布局 */
+#dubbing-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+/* 声优卡片样式 */
+.character-card {
+	max-width: 150px;
+    background: #f8f9fa;
+    border-radius: 8px;
+	padding: 5px;
+    transition: all 0.2s;
+    align-items: center;
+}
+
+.character-card:hover {
+    transform: translateY(-3px);
+    background: #fb729911;
+    box-shadow: 0 3px 12px rgba(251, 114, 153, 0.1);
+}
+
+/* 制作人员列表美化 */
+#staff-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.staff-item {
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 6px;
+    transition: all 0.2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.staff-item:hover {
+    background: #fb729911;
+    transform: translateX(5px);
+}
+
+.staff-item span:first-child {
+    color: #666;
+    font-size: 14px;
+}
+
+.staff-item span:last-child {
+    font-weight: 500;
+    color: #222;
+}
+
+.info {
+	background: white;
+	padding: 20px;
+	border-radius: 8px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.meta-container {
+	display: flex;
+	gap: 20px;
+}
+
+.cover-image {
+	width: 200px;
+	height: 280px;
+	border-radius: 10px;
+	object-fit: cover;
+}
+
+.meta-content {
+	flex: 1;
+}
+
+.anime-title {
+	color: #222;
+	margin: 0 0 15px 0;
+	font-size: 24px;
+}
+
+.meta-grid {
+	display: flex;
+	gap: 15px;
+	flex-wrap: wrap;
+}
+
+.meta-item {
+	background: #f0f0f0;
+	padding: 6px 12px;
+	border-radius: 4px;
+	font-size: 14px;
+}
+
+.categories {
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+.categories span {
+	background: #fb7299;
+	color: white;
+	padding: 5px 10px;
+	border-radius: 12px;
+	font-size: 12px;
+}
+
+.description {
+	position: relative;
+	line-height: 1.6;
+	color: #444;
+	letter-spacing: 2px;
+}
+
+/* 调整原有样式 */
+.series-header,
+.info-title {
+	font-size: 18px;
+	font-weight: 600;
+	color: #222;
+	padding-top: 5px;
+	margin-left: 10px;
+}
+
+.Series {
+	background-color: white;
+	margin-left: 15px;
+	border-radius: 10px;
+	height: calc(auto + 20px);
+	margin-bottom: 20px;
+}
+
+a{
+	color: black;
+	text-decoration: none;
+}
